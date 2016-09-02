@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1 style="margin-bottom: 50px">Contacts</h1>
+  <table class="table text-center">
+    <thead>
+      <tr>
+        <th class="text-center">First Name</th>
+        <th class="text-center">Last Name</th>
+        <th class="text-center">Date of Birth</th>
+        <th class="text-center">Number</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for contact in contacts %}
+      <tr>
+        <td>{{ contact.first_name }}</td>
+        <td>{{ contact.last_name }}</td>
+        <td>{{ contact.date_of_birth }}</td>
+        <td>{{ contact.telephone_number }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
